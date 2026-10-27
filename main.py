@@ -17,6 +17,9 @@ from operaciones.numerar_pdf import (
     numerar_pdf
 )
 
+from operaciones.insertar_sellos import (
+    insertar_sellos
+)
 
 # ============================================================
 # SALIR
@@ -138,14 +141,25 @@ tk.Button(
     pady=7
 )
 
+tk.Button(
+    ventana_principal,
+    text="5. Insertar sellos",
+    width=35,
+    height=2,
+    command=lambda: insertar_sellos(
+        ventana_principal
+    )
+).pack(
+    pady=7
+)
 
 # ============================================================
-# OPCIÓN 5
+# OPCIÓN 6
 # ============================================================
 
 tk.Button(
     ventana_principal,
-    text="5. Salir",
+    text="6. Salir",
     width=35,
     height=2,
     command=salir
